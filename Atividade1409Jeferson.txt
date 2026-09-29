@@ -1,0 +1,137 @@
+Atividade 1:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int idade1 = ler.nextInt();
+        int idade2 = ler.nextInt();
+        int idade3 = ler.nextInt();
+
+        int camila;
+
+        if ((idade1 > idade2 && idade2 > idade3) ||
+            (idade3 > idade2 && idade2 > idade1)) {
+
+        camila = idade2;
+
+        } else if ((idade2 > idade1 && idade1 > idade3) ||
+                   (idade3 > idade1 && idade1 > idade2)) {
+
+        camila = idade1;
+
+        } else {
+
+        camila = idade3;
+        }
+
+        System.out.println("A idade de Camila é: " + camila);
+    }
+}
+
+Atividade 2:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int vitorias = 0;
+
+        for (int i = 0; i < 6; i++) {
+        char resultado = ler.next().charAt(0);
+
+        if (resultado == 'V') {
+        vitorias++;
+    }
+}
+
+        if (vitorias == 5 || vitorias == 6) {
+        System.out.println("O participante será colocado no grupo 1");
+        } else if (vitorias == 3 || vitorias == 4) {
+        System.out.println("O participante será colocado no grupo 2");
+        } else if (vitorias == 1 || vitorias == 2) {
+        System.out.println("O participante será colocado no grupo 3");
+        } else {
+        System.out.println("O participante não será colocado em nenhum grupo");
+        }
+    }
+}
+Atividade 3:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int S = sc.nextInt();
+        int A = sc.nextInt();
+        int B = sc.nextInt();
+
+        int quantidade = 0;
+
+        for (int i = A; i <= B; i++) {
+        int numero = i;
+        int soma = 0;
+
+        while (numero > 0) {
+        soma = soma + (numero % 10);
+        numero = numero / 10;
+}
+
+        if (soma == S) {
+        quantidade++;
+    }
+}
+
+    System.out.println("A quantidade de números com soma dos dígitos igual a " + S + " é: " + quantidade);
+    }
+}
+Atividade 4:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int N = ler.nextInt();
+
+        int quantidade = (N + 1) * (N + 2) / 2;
+
+        System.out.println("A quantidade de peças do dominó duplo-" + N + " é: " + quantidade);
+    }
+}
+Atividade 5:
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int N1 = ler.nextInt();
+        int D1 = ler.nextInt();
+        int V1 = ler.nextInt();
+
+        int N2 = ler.nextInt();
+        int D2 = ler.nextInt();
+        int V2 = ler.nextInt();
+
+        double velocidade1 = V1 * 1000.0 / 3600.0;
+        double velocidade2 = V2 * 1000.0 / 3600.0;
+
+        double tempo1 = D1 / velocidade1;
+        double tempo2 = D2 / velocidade2;
+
+        if (tempo1 < tempo2) {
+        System.out.println("A charrete vencedora é: " + N1);
+        } else {
+        System.out.println("A charrete vencedora é: " + N2);
+        }
+    }
+}
